@@ -1,55 +1,58 @@
+@import '../../styles/variables.scss';
+
 .input-container {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: $spacing-xs;
   width: 100%;
-  margin-bottom: 16px;
+  margin-bottom: $spacing-md;
 
   .input-label {
-    font-size: 14px;
-    color: #333;
+    font-size: $font-size-sm;
+    color: $text-primary;
     font-weight: 500;
-    margin-bottom: 4px;
+    margin-bottom: $spacing-xs;
 
     .required {
-      color: #ff0000;
-      margin-left: 4px;
+      color: $danger;
+      margin-left: $spacing-xs;
     }
   }
 
   .input-field {
-    padding: 8px 12px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-    transition: all 0.2s ease;
+    padding: $spacing-sm $spacing-md;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    font-size: $font-size-sm;
+    transition: $transition-base;
+    height: 3rem;
     width: 100%;
-    background-color: #fff;
+    background-color: $bg-primary;
 
     &:focus {
       outline: none;
-      border-color: #007bff;
-      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+      border-color: $border-color-focus;
+      box-shadow: $shadow-sm;
     }
 
     &.error {
-      border-color: #ff0000;
+      border-color: $danger;
       
       &:focus {
-        box-shadow: 0 0 0 2px rgba(255, 0, 0, 0.25);
+        box-shadow: 0 0 0 2px rgba($danger, 0.25);
       }
     }
 
     &:disabled {
-      background-color: #f5f5f5;
+      background-color: $gray-100;
       cursor: not-allowed;
       opacity: 0.7;
     }
   }
 
   .error-message {
-    color: #ff0000;
-    font-size: 12px;
-    margin-top: 4px;
+    color: $danger;
+    font-size: $font-size-xs;
+    margin-top: $spacing-xs;
   }
 } 

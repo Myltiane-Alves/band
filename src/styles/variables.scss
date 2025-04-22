@@ -1,0 +1,82 @@
+// Colors
+$primary: #007bff;
+$primary-hover: #0056b3;
+$secondary: #6c757d;
+$secondary-hover: #545b62;
+$success: #28a745;
+$danger: #dc3545;
+$warning: #ffc107;
+$info: #17a2b8;
+
+
+// Grays
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+
+// Text colors
+$text-primary: #FFFFFF;
+$text-secondary: #07CDC3;
+$text-light: #f8f9fa;
+
+// Background colors
+$bg-primary: #1E1E1E;
+$bg-secondary: #f8f9fa;
+
+// Button colors
+$button-primary: #00BBB2;
+$button-primary-hover: #00bbb2b0;
+$button-secondary: #1E1E1E;
+
+// Border colors
+$border-color: #363636;
+$border-color-focus: #00BBB2;
+
+// Shadows
+$shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+$shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+$shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+// Transitions
+$transition-base: all 0.2s ease-in-out;
+$transition-fade: opacity 0.15s linear;
+$transition-collapse: height 0.35s ease;
+
+// Border radius
+$border-radius-sm: 0.2rem;
+$border-radius: 0.25rem;
+$border-radius-lg: 0.3rem;
+$border-radius-pill: 50rem;
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 3rem;
+
+// Font sizes
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-base: 1rem;
+$font-size-lg: 1.5rem;
+$font-size-xl: 2rem;
+
+$font-size-title-base: 1.5rem;
+$font-size-title-lg: 2rem;
+$font-size-title-xl: 2.5rem;
+
+// Z-index
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070; 

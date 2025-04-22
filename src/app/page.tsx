@@ -1,13 +1,14 @@
 "use client"
 import Image from "next/image";
-import styles from "./page.module.scss";
+import styles from "../styles/page.module.scss";
 import Formulario from "@/components/Formulario/Formulario";
 import  logo from "../../public/assets/logo.png";
+import Link from "next/link";
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <div>
+        <div className={styles.logoContainer}>
 
           <Image
             className={styles.logo}
@@ -18,8 +19,25 @@ export default function Home() {
             priority
           />
         </div>
-        
-        <Formulario />
+        <div className={styles.formContainer}>
+          <header className={styles.header}>
+            <div>
+
+              <h1>Seja Bem-vindo</h1>
+            </div>
+
+            <div>
+
+              <p> Seu sistema de gerenciamento de banda</p>
+            </div>
+          </header>
+          <Formulario />
+
+          <div>
+            <Link href="#">Esqueceu sua senha?</Link>
+            <Link href="/signup">Não tem uma conta?</Link>
+          </div>
+        </div>
       </main>
       <footer className={styles.footer}>
         <a

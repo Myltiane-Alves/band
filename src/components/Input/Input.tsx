@@ -39,6 +39,7 @@ export default function Input({
         onChange={(e) => onChange(e.target.value)}
         required={required}
         disabled={disabled}
+      
       />
       {error && <span className="error-message">{error}</span>}
     </div>
