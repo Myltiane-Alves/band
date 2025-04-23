@@ -2,9 +2,9 @@
 import Image from "next/image";
 import styles from "../../styles/page.module.scss";
 import Formulario from "@/components/Formulario/Formulario";
-import  logo from "../../public/assets/logo.png";
+import  logo from "../../../public/assets/logo.png";
 import Link from "next/link";
-export default function DashBoard() {
+export default function Login() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
