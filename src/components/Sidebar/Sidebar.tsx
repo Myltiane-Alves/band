@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { FiHome, FiLogOut, FiMenu, FiSettings, FiUser } from "react-icons/fi";
-import styles from '@/styles/Sidebar.module.scss';
+import styles from '../../styles/sidebar.module.scss';
 
 export default function Sidebar() {
     const [isOpen, setIsOpen] = useState(false);
