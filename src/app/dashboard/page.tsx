@@ -8,10 +8,10 @@ import Cipher from "../components/cipher";
 import DashBoardComponent from "../components/DashBoard";
 export default function DashBoard() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
+    <div >
+      <main >
           <h1>Dashboard</h1>
-          <Sidebar />
+          {/* <Sidebar /> */}
           <DashBoardComponent />
           {/* <Cipher /> */}
       </main>

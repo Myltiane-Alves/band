@@ -2,7 +2,7 @@ import styles from './styles.module.scss';
 import profile from '../../../../../public/assets/user.png'
 import Image from 'next/image';
 const UserProfile = {
-    name: 'Nome',
+    name: 'Myltiane ',
     email: 'email@email.com',
     phone: '11 99999-9999',
     address: 'Rua Teste, 123',
