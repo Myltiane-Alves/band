@@ -16,8 +16,14 @@ export default function Profile() {
         <div className={styles.containerProfile}>
             <div className={styles.content}>
                 <div className={styles.profile}>
-                    <Image src={profile} alt="profile" />
-                    <p>{UserProfile.name}</p>
+                    <div className={styles.profileImage}>
+
+                        <Image src={profile} alt="profile" />
+                    </div>
+                    <div className={styles.profileName}>
+
+                        <p>{UserProfile.name}</p>
+                    </div>
                 </div>
             </div>
         </div>
