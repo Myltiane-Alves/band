@@ -20,6 +20,7 @@ export default function PlayListCard({ url, title, description, tone }: CardProp
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
+                    style={{borderRadius: '10px'}}
                 ></iframe>
             </div>
             <div className={styles.containerInfo}>
