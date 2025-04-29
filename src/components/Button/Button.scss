@@ -1,0 +1,115 @@
+@import "../../styles/variables.scss";
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: $border-radius-pill;
+  font-weight: 500;
+  cursor: pointer;
+  transition: $transition-base;
+  text-decoration: none;
+  margin: $spacing-xs;
+  font-family: var(--font-geist-sans);
+  background-color: $button-primary;
+  // Variants
+
+  &.outline {
+    background-color: transparent;
+    border: 1px solid $secondary;
+    color: $gray-100;
+    margin-bottom: 20px;
+
+    &:hover:not(:disabled) {
+      background-color: $button-primary;
+      color: $text-light;
+    }
+  }
+
+  &.text {
+    background-color: transparent;
+    color: $primary;
+    padding: 0;
+
+    &:hover:not(:disabled) {
+      text-decoration: underline;
+      text-underline-offset: $spacing-xs;
+    }
+  }
+
+  // Sizes
+  &.small {
+    padding: $spacing-xs $spacing-sm;
+    font-size: $font-size-xs;
+    height: 32px;
+  }
+
+  &.medium {
+    padding: $spacing-sm $spacing-md;
+    font-size: $font-size-sm;
+    height: 40px;
+  }
+
+  &.large {
+    padding: $spacing-lg $spacing-xl;
+    font-size: $font-size-middle;
+    height: 55px;
+  }
+
+  &.full-icon {
+    display: flex;
+    gap: 1.1rem;
+    padding: $spacing-lg $spacing-xs;
+    font-size: $font-size-middle;
+    height: 58px;
+  }
+
+  // States
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &.full-width {
+    width: 100%;
+  }
+
+  &.loading {
+    position: relative;
+    color: transparent;
+
+    .loading-spinner {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border: 2px solid rgba($text-light, 0.3);
+      border-radius: 50%;
+      border-top-color: currentColor;
+      animation: spin 1s ease-in-out infinite;
+    }
+  }
+}
+
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+  .button {
+    &.primary {
+      background-color: $button-primary;
+      color: $text-light;
+
+      &:hover:not(:disabled) {
+        background-color: $button-primary-hover;
+      }
+    }
+
+    &.secondary {
+      background-color: $gray-700;
+      color: $text-light;
+
+      &:hover:not(:disabled) {
+        background-color: $gray-800;
+      }
+    }
+  }
+}

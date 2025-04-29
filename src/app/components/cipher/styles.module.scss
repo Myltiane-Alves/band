@@ -1,0 +1,26 @@
+.cifra_cnt {
+    min-height: 553px;
+    font-size: 14px;
+    transition: margin-top .2s;
+    margin-top: 0;
+    color: #212121;
+}
+
+.cifra-mono, .cifra-mono pre {
+    font-family: "Roboto Mono","Courier New","Courier",monospace;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    text-size-adjust: none;
+    line-height: 1.6;
+    -moz-tab-size: 8;
+    -o-tab-size: 8;
+    tab-size: 8;
+}
+
+.pre {
+    margin: 1px 0px;
+    padding: 0;
+    border: 0;
+   unicode-bidi: isolate;
+    display: block;
+}

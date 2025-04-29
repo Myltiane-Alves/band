@@ -1,0 +1,60 @@
+@import "../../styles/variables.scss";
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+  width: 100%;
+  margin-bottom: $spacing-md;
+
+  .input-label {
+    font-size: $font-size-sm;
+    color: $text-primary;
+    font-weight: 500;
+    margin-bottom: $spacing-xs;
+
+    .required {
+      color: $danger;
+      margin-left: $spacing-xs;
+    }
+  }
+
+  .input-field {
+    padding: $spacing-sm $spacing-lg;
+    border: 1px solid $border-color;
+    border-radius: $border-radius-pill;
+    font-size: $font-size-middle;
+    transition: $transition-base;
+    height: 3.7rem;
+    width: 100%;
+    background-color: $bg-tertiary;
+    &::placeholder {
+      color: $text-transparent-light;
+    }
+    &:focus {
+      outline: none;
+      border-color: $border-color-focus;
+      box-shadow: $shadow-sm;
+    }
+
+    &.error {
+      border-color: $danger;
+
+      &:focus {
+        box-shadow: 0 0 0 2px rgba($danger, 0.25);
+      }
+    }
+
+    &:disabled {
+      background-color: $gray-100;
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+  }
+
+  .error-message {
+    color: $danger;
+    font-size: $font-size-xs;
+    margin-top: $spacing-xs;
+  }
+}
