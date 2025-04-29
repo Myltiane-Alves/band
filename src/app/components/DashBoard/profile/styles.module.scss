@@ -25,12 +25,13 @@
                 }
             }
             .profileName {
-                margin-top: 1rem;
+                // margin-top: 1rem;
                 p {
                     font-size:  $font-size-base;
                     font-weight: 500;
                     color: $text-primary;
                     text-align: center;
+                    margin: 0;
                 }
             }
         }

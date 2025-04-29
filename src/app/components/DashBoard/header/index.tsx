@@ -7,8 +7,11 @@ export default function Header() {
     return (
         <div className={styles.containerHeader}>
             <Profile />
-            <Notifications />
-            <Add />
+            <div className={styles.containerNotifications}>
+
+                <Notifications />
+                <Add />
+            </div>
         </div>
     );
 }

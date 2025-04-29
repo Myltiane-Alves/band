@@ -1,20 +1,25 @@
 .containerNotifications {
+    background-color: #3232327D;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .notifications {
-        background-color: #3232327D;
-        border-radius: 50%;
         cursor: pointer;
         color: #FFFFFF;
     }
     .notificationsNone {
-        background-color: #3232327D;
-        border-radius: 50%;
+        // background-color: #3232327D;
+        // border-radius: 50%;
         cursor: pointer;
         color: #FFFFFF;
     }
 
     .notificationsOff {
-        background-color: #3232327D;
-        border-radius: 50%;
+        // background-color: #3232327D;
+        // border-radius: 50%;
         cursor: pointer;
         color: #FFFFFF;
     }
