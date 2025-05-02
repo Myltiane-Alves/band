@@ -12,6 +12,9 @@ interface CardProps {
 export default function PlayListCard({ url, title, description, tone }: CardProps) {
     return (
         <div className={styles.container}>
+            <header className={styles.header}>
+                <h2>Playlist da semana</h2>
+            </header>
             <div className={styles.containerVideo}>
                 <iframe 
                     src={url.replace('watch?v=', 'embed/')}
