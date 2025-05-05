@@ -5,44 +5,76 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
+    // padding: 10px;
     // background-color: $bg-tertiary;
-    border: 1px;
-    border-color: #2F00890A;
-    border-radius: 10px;
     width: 100%;
     height: 100%;
     .header {
-        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        margin: 2rem;
+        width: 100%;
+        height: 100%;
+        
         h2 {
             font-size: $font-size-base;
         }
     }
-    .containerVideo {
-        background-color: aqua;
-        width: 100%;
-        height: 100%;
-    }
-    .containerInfo {
+    .content {
         display: flex;
         flex-direction: column;
-        align-items: start;
+        align-items: center;
         justify-content: space-between;
-        width: 100%;
-        height: 100%;
         border-radius: 10px;
-        background-color: red;
-        h2 {
-            font-size: $font-size-sm;
-            font-weight: 600;
-            color: $text-primary;
+        width: 100%;
+        // border: 1px solid yellow;
+        height: 100%;
+        .containerVideo {
+            // background-color: aqua;
+            width: 100%;
+            height: 100%;
         }
-        h3 {
-            font-size: $font-size-sm;
-            font-weight: 400;
-            color: $text-primary;
+        .containerInfo {
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            justify-content: space-between;
+            border: 0px 1px 1px 1px solid;
+            border-color: #BF92FFAD;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            // background-color: red;
+            padding: 1rem;
+            .containerInfoDescription{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                // background-color: aqua;
+                h3 {
+                    font-size: $font-size-sm;
+                    font-weight: 600;
+                    color: $text-primary;
+                }
+           
+                .tone {
+                    font-size: $font-size-base;
+                    font-weight: 400;
+                    color: #f7a017;
+                }
+            }
+            .containerInfoButton {
+                // background-color: $bg-primary;
+                > button {
+                    background-color: #6200fc;
+                    border-radius: 100%;
+                    width: 3rem;
+                    height: 3rem;
+                    border: none;
+                }
+            }
+                
         }
-        
-            
     }
 }

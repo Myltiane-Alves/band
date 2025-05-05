@@ -52,6 +52,15 @@ export default function DashBoardComponent() {
                     music=" Ele vem Gabriel Guedes"
                     artist="Artista 1"
                 />
+                <Notice 
+                    img={calendar}
+                    description="Ensaio culto Nova geração"
+                    color="#A688FF"
+                    size={100}
+                    date=" 2024-01-01 16:40h"
+                    music=" Ele vem Gabriel Guedes"
+                    artist="Artista 1"
+                />
             </div>
             <div className={styles.containerPlayList}>
                 <PlayListCard 

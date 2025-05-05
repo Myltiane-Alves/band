@@ -26,12 +26,13 @@ $text-secondary: #07CDC3;
 $text-light: #f8f9fa;
 
 // Background colors
-$bg-primary: #1E1E1E;
+$bg-primary:linear-gradient(to bottom, #060111, #0F012B, #2F0089);
+// $bg-primary: #1E1E1E;
 $bg-secondary: #f8f9fa;
 $bg-tertiary: #423565;
 
 // Button colors
-$button-primary: #00BBB2;
+$button-primary: #6200FC;
 $button-primary-hover: #00bbb2b0;
 $button-secondary: #1E1E1E;
 
