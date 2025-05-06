@@ -1,27 +1,29 @@
-"use client"
-import React from 'react';
-import './Input.scss';
+"use client";
+import React from "react";
+import "./Input.scss";
 
 interface InputProps {
   label?: string;
   placeholder?: string;
-  type?: 'text' | 'password' | 'email' | 'number';
+  type?: "text" | "password" | "email" | "number";
   value: string;
   onChange: (value: string) => void;
   error?: string;
   required?: boolean;
   disabled?: boolean;
+  onFocus?: () => void;
 }
 
 export default function Input({
   label,
   placeholder,
-  type = 'text',
+  type = "text",
   value,
   onChange,
   error,
   required = false,
   disabled = false,
+  onFocus,
 }: InputProps) {
   return (
     <div className="input-container">
@@ -32,14 +34,14 @@ export default function Input({
         </label>
       )}
       <input
-        className={`input-field ${error ? 'error' : ''}`}
+        className={`input-field ${error ? "error" : ""}`}
         type={type}
         placeholder={placeholder}
         value={value}
         onChange={(e) => onChange(e.target.value)}
         required={required}
         disabled={disabled}
-      
+        onFocus={onFocus}
       />
       {error && <span className="error-message">{error}</span>}
     </div>

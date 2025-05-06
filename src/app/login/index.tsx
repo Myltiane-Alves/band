@@ -13,6 +13,7 @@ export default function Login() {
             className={styles.logo}
             src={logo}
             alt="GoBand Logo"
+            style={{ objectFit: "contain" }}
             priority
           />
         </div>
