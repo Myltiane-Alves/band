@@ -69,6 +69,18 @@ export default function DashBoardComponent() {
                     description="Attos 2 worship"
                     tone="TOM: C#"
                 />
+                <PlayListCard 
+                    url="https://www.youtube.com/watch?v=NLTi5YXJTtU"
+                    title="Na unção de Deuss"
+                    description="Attos 2 worship"
+                    tone="TOM: C#"
+                />
+                <PlayListCard 
+                    url="https://www.youtube.com/watch?v=NLTi5YXJTtU"
+                    title="Na unção de Deuss"
+                    description="Attos 2 worship"
+                    tone="TOM: C#"
+                />
             </div>
         </div>
     );

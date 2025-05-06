@@ -10,7 +10,7 @@ export default function DashBoard() {
   return (
     <div className={styles.container}>
       <main >
-          <h1>Dashboard</h1>
+          {/* <h1>Dashboard</h1> */}
           {/* <Sidebar /> */}
           <DashBoardComponent />
           {/* <Cipher /> */}

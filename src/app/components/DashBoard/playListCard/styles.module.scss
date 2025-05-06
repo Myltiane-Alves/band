@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    // padding: 10px;
+    padding: 10px;
     // background-color: $bg-tertiary;
     width: 100%;
     height: 100%;
@@ -30,21 +30,33 @@
         // border: 1px solid yellow;
         height: 100%;
         .containerVideo {
-            // background-color: aqua;
             width: 100%;
-            height: 100%;
+            aspect-ratio: 16/9; // Isso substitui o padding-bottom hack
+            position: relative;
+            background-color: #f7a017;
+            border-radius: 10px 10px 10px 10px; // Mova o border-radius para o container
+            overflow: hidden; // Isso garante que o iframe respeite o border-radius
+            > iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+            }
         }
         .containerInfo {
             display: flex;
             flex-direction: row;
             align-items: start;
             justify-content: space-between;
-            border: 0px 1px 1px 1px solid;
-            border-color: #BF92FFAD;
+            border-top: none;
+            border-right: 1px solid #BF92FFAD;
+            border-bottom: 1px solid #BF92FFAD;
+            border-left: 1px solid #BF92FFAD;
             width: 100%;
             height: 100%;
-            border-radius: 10px;
-            // background-color: red;
+            border-radius: 0px 0px 10px 10px;
             padding: 1rem;
             .containerInfoDescription{
                 width: 100%;
@@ -65,7 +77,7 @@
                 }
             }
             .containerInfoButton {
-                // background-color: $bg-primary;
+                
                 > button {
                     background-color: #6200fc;
                     border-radius: 100%;
@@ -75,6 +87,41 @@
                 }
             }
                 
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        .header {
+            h2 {
+                font-size: $font-size-lg;
+            }
+        }
+        .content {
+            
+            .containerVideo {
+                aspect-ratio: 16/9; // Isso substitui o padding-bottom hack
+                > iframe {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .containerInfo {
+                justify-content: end;
+                .containerInfoDescription {
+                    h3 {
+                        font-size: $font-size-lg;
+                    }
+                    p {
+                        font-size: $font-size-base;
+                    }
+                    .tone {
+                        font-size: $font-size-lg;
+                    }
+                }
+            }
         }
     }
 }

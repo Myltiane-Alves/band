@@ -21,12 +21,12 @@ export default function PlayListCard({ url, title, description, tone }: CardProp
                 <div className={styles.containerVideo}>
                     <iframe 
                         src={url.replace('watch?v=', 'embed/')}
-                        width="100%"
-                        height="100%"
+                        // width="100%"
+                        // height="100%"
                         frameBorder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowFullScreen
-                        style={{borderRadius: '10px'}}
+                        // style={{borderRadius: '10px', width: '100%', height: '100%'}}
                     ></iframe>
                 </div>
                 <div className={styles.containerInfo}>
