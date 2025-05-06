@@ -77,7 +77,8 @@
                 }
             }
             .containerInfoButton {
-                
+                display: flex;
+                flex-direction: column;
                 > button {
                     background-color: #6200fc;
                     border-radius: 100%;
@@ -109,8 +110,11 @@
                 }
             }
             .containerInfo {
-                justify-content: end;
+              
+           
                 .containerInfoDescription {
+                    justify-content: end;
+                    
                     h3 {
                         font-size: $font-size-lg;
                     }
@@ -119,6 +123,18 @@
                     }
                     .tone {
                         font-size: $font-size-lg;
+                    }
+                }
+                .containerInfoButton {
+                    
+                    width: 100%;
+                    height: 100%;
+                    justify-content:flex-end;
+                    align-items: self-end;
+                    > button {
+                        font-size: $font-size-lg;
+                        width: 4rem;
+                        height: 4rem;
                     }
                 }
             }
