@@ -40,3 +40,14 @@ html {
     color-scheme: dark;
   }
 }
+
+.main-content {
+  margin-left: 240px; // Same width as sidebar
+  min-height: 100vh;
+  padding: 2rem;
+  
+  @media (max-width: 768px) {
+    margin-left: 0;
+    padding: 1rem;
+  }
+}
