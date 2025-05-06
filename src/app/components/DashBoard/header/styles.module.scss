@@ -9,7 +9,7 @@
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     width: 100%;
     height: 100%;
-    margin: 2rem 0 2rem 0;
+    // margin: 2rem 0 2rem 0;
     .containerNotifications {
         display: flex;
         flex-direction: row;
@@ -18,5 +18,15 @@
         width: 50%;
         height: 100%;
    
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .containerHeader {
+        // background-color: aquamarine;
+        .containerNotifications {
+            width: 20%;
+            height: 100%;
+        }
     }
 }
