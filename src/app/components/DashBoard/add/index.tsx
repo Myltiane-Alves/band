@@ -1,11 +1,24 @@
-import { MdAddCircle } from "react-icons/md";
+import { MdAddCircle, MdOutlineClose } from "react-icons/md";
 import styles from './styles.module.scss';
 import { IoAdd } from "react-icons/io5";
-export default function Add() {
+interface NotificationsProps {
+    hasNotification?: boolean;
+    isViewed?: boolean;
+}
+
+
+export default function Add({ hasNotification = false, isViewed = false }: NotificationsProps) {
     return (
         <div className={styles.containerAdd}>
-            {/* <MdAddCircle size={24} className={styles.add}  color="#ffffff"/> */}
-            <IoAdd size={24} className={styles.add}  />
+            {hasNotification && !isViewed ? (
+                <MdOutlineClose size={24} className={styles.add} />
+            ) : !hasNotification ? (
+                <IoAdd size={24} className={styles.add} />
+            ) : (
+                <MdOutlineClose size={24} className={styles.add} />
+            )}
+            {/* <MdOutlineClose size={24} className={styles.add} />
+            <IoAdd size={24} className={styles.add}  /> */}
         </div>
     );
 }

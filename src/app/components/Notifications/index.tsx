@@ -8,6 +8,7 @@ import image from "../../../public/assets/logo.png";
 import Notice from "../DashBoard/notice";
 import calendar from "../../../../public/assets/calendar.png";
 import music from "../../../../public/assets/music.png"
+import Header from "../DashBoard/header";
 export default function NotificationComponent() {
     const [isOpen, setIsOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(true);
@@ -36,6 +37,9 @@ export default function NotificationComponent() {
         <>
 
             <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
+                <div className={styles.containerHeader}>
+                    <Header />
+                </div>
                 <div className={styles.containerNotices}>
                     <Notice
                         img={calendar}
