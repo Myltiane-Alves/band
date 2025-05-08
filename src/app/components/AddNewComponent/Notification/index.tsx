@@ -8,7 +8,7 @@ interface NotificationsProps {
     onToggleNotification?: () => void;
 }
 
-export default function Notifications({ hasNotification = false, isViewed = false, onToggleNotification }: NotificationsProps) {
+export default function NotificationsNewComponent({ hasNotification = false, isViewed = false, onToggleNotification }: NotificationsProps) {
     const { isOpen, toggleSidebar } = useSidebar();
 
     const handleClick = () => {

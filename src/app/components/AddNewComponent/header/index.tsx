@@ -1,6 +1,6 @@
 import Add from "../add";
 import Profile from "../profile";
-import Notifications from "../warnings";
+import Notifications from "../../DashBoard/";
 import styles from './styles.module.scss';
 import { useSidebar } from '@/contexts/SidebarContext';
 
@@ -8,7 +8,7 @@ interface HeaderProps {
     onToggleSidebar?: () => void;
 }
 
-export default function Header({ onToggleSidebar }: HeaderProps) {
+export default function HeaderNewComponent({ onToggleSidebar }: HeaderProps) {
     const { toggleSidebar } = useSidebar();
 
     const handleToggleSidebar = () => {
@@ -20,7 +20,7 @@ export default function Header({ onToggleSidebar }: HeaderProps) {
 
     return (
         <div className={styles.containerHeader}>
-            <Profile />
+            {/* <Profile /> */}
             <div className={styles.containerNotifications}>
                 {/* <Notifications  hasNotification={true} isViewed={false} onToggle={handleToggleSidebar} /> */}
                 <Notifications  hasNotification={false} isViewed={false} onToggleNotification={handleToggleSidebar} />

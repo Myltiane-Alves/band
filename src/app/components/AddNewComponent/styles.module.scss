@@ -38,37 +38,41 @@
 @media (min-width: 767px) {
     .sidebar {
         width: 70%;
-        .containerHeader {
-            width: 100%;
-        }
         .containerNotices {
             width: 100%;
             height: auto;
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
             gap: 1rem;
             align-items: start;
             margin: 1rem;
         }
-        
+        .containerPlayList {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
     }
 }
 @media (min-width: 1280px) {
     .sidebar {
-        width: 40%;
-        .containerHeader {
-            width: 100%;
-          
-        }
+        width: 50%;
         .containerNotices {
             width: 100%;
             height: auto;
             display: grid;
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
             gap: 1rem;
             align-items: start;
             margin: 1rem;
         }
-      
+        .containerPlayList {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin: 1rem;
+        }
+        .containerCards {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
     }
 }

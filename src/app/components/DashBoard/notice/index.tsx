@@ -1,4 +1,4 @@
-import { StaticImageData } from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import styles from './styles.module.scss';
 
 interface NoticeProps {
@@ -14,8 +14,12 @@ interface NoticeProps {
 export default function Notice({ img, description, color, size, date, music, artist }: NoticeProps) {
     return (
         <div className={styles.container}>
+            <div className={styles.cardImage}>
+
+                <Image src={img.src} alt={description} width={size} height={size} />
+            </div>
             <div className={styles.cardDescription}>    
-                <img src={img.src} alt={description} width={size} height={size} />
+                
                 <h2 className={styles.title}>{description}</h2>
                 <div className={styles.contentDate}>
                     <h3 className={styles.subTitle}>Data:</h3>

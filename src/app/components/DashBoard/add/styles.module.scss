@@ -7,6 +7,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    .buttonAdd {
+        border: none;
+        background-color: transparent;
+    }
     .add {
         // color: #3232327D;
         color: #FFFFFF;

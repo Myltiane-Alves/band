@@ -4,25 +4,33 @@ import { IoAdd } from "react-icons/io5";
 import { useSidebar } from '@/contexts/SidebarContext';
 
 interface NotificationsProps {
-    hasNotification?: boolean;
-    isViewed?: boolean;
+    hasNotificationAdd?: boolean;
+    isViewedAdd?: boolean;
+    onToggle?: () => void;
 }
 
-export default function Add({ hasNotification = false, isViewed = false }: NotificationsProps) {
+export default function Add({ hasNotificationAdd = false, isViewedAdd = false, onToggle }: NotificationsProps) {
     const { isOpen, toggleSidebar } = useSidebar();
+
+    const handleClick = () => {
+        toggleSidebar();
+        if (onToggle) {
+            onToggle();
+        }
+    };
 
     return (
         <div className={styles.containerAdd}>
-            {hasNotification && !isViewed ? (
-                <button className={styles.buttonAdd} onClick={toggleSidebar}>
+            {hasNotificationAdd && !isViewedAdd ? (
+                <button className={styles.buttonAdd} onClick={handleClick}>
                     <MdOutlineClose size={24} className={styles.add} />
                 </button>
-            ) : !hasNotification ? (
-                <button className={styles.buttonAdd} onClick={toggleSidebar}>
+            ) : !hasNotificationAdd ? (
+                <button className={styles.buttonAdd} onClick={handleClick}>
                     <IoAdd size={24} className={styles.add} />
                 </button>
             ) : (
-                <button className={styles.buttonAdd} onClick={toggleSidebar}>
+                <button className={styles.buttonAdd} onClick={handleClick}>
                     <MdOutlineClose size={24} className={styles.add} />
                 </button>
             )}

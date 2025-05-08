@@ -6,10 +6,14 @@ import { BsMusicNoteList } from "react-icons/bs";
 import Notice from "./notice";
 import calendar from "../../../../public/assets/calendar.png";
 import PlayListCard from "./playListCard";
+import { useSidebar } from '@/contexts/SidebarContext';
+
 export default function DashBoardComponent() {
+    const { toggleSidebar } = useSidebar();
+
     return (
         <div className={styles.container}>
-            <Header />
+            <Header onToggleSidebar={toggleSidebar} />
             <div className={styles.containerCards}>
                 <Card 
                     icon={MdOutlineCalendarMonth}

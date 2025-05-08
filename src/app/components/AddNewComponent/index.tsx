@@ -10,8 +10,9 @@ import calendar from "../../../../public/assets/calendar.png";
 import music from "../../../../public/assets/music.png"
 import Header from "../DashBoard/header";
 import { useSidebar } from '@/contexts/SidebarContext';
+import HeaderNewComponent from "./header";
 
-export default function NotificationsComponent() {
+export default function AddNewComponent() {
     const { isOpen, toggleSidebar } = useSidebar();
     const [isMobile, setIsMobile] = useState(true);
 
@@ -31,7 +32,7 @@ export default function NotificationsComponent() {
         <div className={styles.container}>
             <aside className={`${styles.sidebar} ${isOpen ? styles.open : ''}`}>
                 <div className={styles.containerHeader}>
-                    <Header onToggleSidebar={toggleSidebar} />
+                    <HeaderNewComponent onToggleSidebar={toggleSidebar} />
                 </div>
                 <div className={styles.containerNotices}>
                     <Notice
