@@ -42,14 +42,10 @@
             width: 100%;
             height: auto;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 1rem;
             align-items: start;
             margin: 1rem;
-        }
-        .containerPlayList {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
         }
     }
 }
@@ -60,19 +56,10 @@
             width: 100%;
             height: auto;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr;
             gap: 1rem;
             align-items: start;
             margin: 1rem;
-        }
-        .containerPlayList {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            margin: 1rem;
-        }
-        .containerCards {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
         }
     }
 }
