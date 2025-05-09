@@ -1,0 +1,18 @@
+.containerAdd {
+    background-color: #6200FC;
+    border-radius: 50%;
+    width: 3.5rem;
+    height: 3.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .buttonAdd {
+        border: none;
+        background-color: transparent;
+    }
+    .add {
+        // color: #3232327D;
+        color: #FFFFFF;
+    }
+}
