@@ -19,12 +19,7 @@ export default function HeaderNewComponent({ onToggleSidebar }: HeaderProps) {
 
     return (
         <div className={styles.containerHeader}>
-            {/* <Profile /> */}
-            <div className={styles.containerNotifications}>
-                {/* <Notifications  hasNotification={true} isViewed={false} onToggle={handleToggleSidebar} /> */}
-                {/* <NotificationsNewComponent  hasNotification={false} isViewed={false} onToggleNotification={handleToggleSidebar} /> */}
-
-             
+            <div className={styles.containerNotifications}>        
                 <AddNewComponent hasAddNew={true} isViewedAdd={false} onToggle={handleToggleSidebar} />
             </div>
         </div>
