@@ -3,13 +3,13 @@ import styles from './styles.module.scss';
 import { IoAdd } from "react-icons/io5";
 import { useSidebar } from '@/contexts/SidebarContext';
 
-interface NotificationsProps {
-    hasNotificationAdd?: boolean;
+interface AddNewProps {
+    hasAddNew?: boolean;
     isViewedAdd?: boolean;
     onToggle?: () => void;
 }
 
-export default function AddNewComponent({ hasNotificationAdd = false, isViewedAdd = false, onToggle }: NotificationsProps) {
+export default function AddNewComponent({ hasAddNew = false, isViewedAdd = false, onToggle }: AddNewProps) {
     const { isOpen, toggleSidebar } = useSidebar();
 
     const handleClick = () => {
@@ -21,11 +21,11 @@ export default function AddNewComponent({ hasNotificationAdd = false, isViewedAd
 
     return (
         <div className={styles.containerAdd}>
-            {hasNotificationAdd && !isViewedAdd ? (
+            {hasAddNew && !isViewedAdd ? (
                 <button className={styles.buttonAdd} onClick={handleClick}>
                     <MdOutlineClose size={24} className={styles.add} />
                 </button>
-            ) : !hasNotificationAdd ? (
+            ) : !hasAddNew ? (
                 <button className={styles.buttonAdd} onClick={handleClick}>
                     <IoAdd size={24} className={styles.add} />
                 </button>

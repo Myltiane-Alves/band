@@ -1,6 +1,8 @@
+
 .sidebar {
     // background: linear-gradient(180deg, #060111 0%, #0F012B 0%, #2F0089 100%);
     background-color: #0F0F0FC2;
+    // background-color: #0F0F0F 75%;
     backdrop-filter: blur(10px); // aplica o desfoque no fundo
     -webkit-backdrop-filter: blur(10px); // suporte para Safari
     width: 100%;
@@ -13,6 +15,8 @@
     z-index: 1000;
     overflow-y: auto;
     padding: 1rem;
+    display: flex;
+    flex-direction: column;
 
     &.open {
         transform: translateX(0);
@@ -20,7 +24,7 @@
 
     .containerHeader {
         width: 100%;
-        margin-bottom: 2rem;
+        margin: 1rem;
     }
 
     .containerNotices {
@@ -52,6 +56,21 @@
 @media (min-width: 1280px) {
     .sidebar {
         width: 50%;
+        .containerNotices {
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            align-items: start;
+            margin: 1rem;
+        }
+    }
+}
+
+@media (min-width: 1400px) {
+    .sidebar {
+        width: 30%;
         .containerNotices {
             width: 100%;
             height: auto;

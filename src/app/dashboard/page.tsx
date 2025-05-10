@@ -19,7 +19,7 @@ export default function DashBoard() {
           <DashBoardComponent />
           {/* <SidebarComponent /> */}
           {/* <Cipher /> */}
-          <NotificationComponent />
+          {/* <NotificationComponent /> */}
           <AddNewComponent />
         </main>
       </div>
