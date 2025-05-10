@@ -9,6 +9,7 @@ import SidebarComponent from "@/components/Sidebar/Sidebar";
 import NotificationComponent from "../components/Notifications";
 import { SidebarProvider } from "@/contexts/SidebarContext";
 import AddNewComponent from "../components/AddNewComponent";
+import PlayListComponent from "../components/PlayList";
 
 export default function DashBoard() {
   return (
@@ -16,11 +17,12 @@ export default function DashBoard() {
       <div className={styles.container}>
         <main>
           {/* <h1>Dashboard</h1> */}
-          <DashBoardComponent />
+          {/* <DashBoardComponent /> */}
           {/* <SidebarComponent /> */}
           {/* <Cipher /> */}
           {/* <NotificationComponent /> */}
-          <AddNewComponent />
+          {/* <AddNewComponent /> */}
+          <PlayListComponent />
         </main>
       </div>
     </SidebarProvider>
