@@ -2,29 +2,22 @@
 import Image from "next/image";
 import styles from "../../styles/dashboard.module.scss";
 import Link from "next/link";
-import Sidebar from "@/components/Sidebar/Sidebar";
 import Cipher from "../components/cipher";
 import DashBoardComponent from "../components/DashBoard";
-import SidebarComponent from "@/components/Sidebar/Sidebar";
 import NotificationComponent from "../components/Notifications";
-import { SidebarProvider } from "@/contexts/SidebarContext";
 import AddNewComponent from "../components/AddNewComponent";
 import PlayListComponent from "../components/PlayList";
 
 export default function DashBoard() {
   return (
-    <SidebarProvider>
-      <div className={styles.container}>
-        <main>
-          {/* <h1>Dashboard</h1> */}
-          {/* <DashBoardComponent /> */}
-          {/* <SidebarComponent /> */}
-          {/* <Cipher /> */}
-          {/* <NotificationComponent /> */}
-          {/* <AddNewComponent /> */}
-          <PlayListComponent />
-        </main>
-      </div>
-    </SidebarProvider>
+    <div className={styles.container}>
+      <main>
+        <DashBoardComponent />
+        {/* <Cipher /> */}
+        {/* <NotificationComponent /> */}
+        {/* <AddNewComponent /> */}
+        {/* <PlayListComponent /> */}
+      </main>
+    </div>
   );
 }

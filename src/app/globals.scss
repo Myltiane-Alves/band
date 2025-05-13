@@ -18,7 +18,8 @@ body {
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  // background: var(--background);
+  background: linear-gradient(180deg, #060111 100%, #0F012B 0%, #2F0089 100%);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

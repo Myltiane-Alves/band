@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.scss";
 import { SidebarProvider } from "@/contexts/SidebarContext";
+import SidebarComponent from "@/components/Sidebar/Sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,9 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>
+      <body className="main-content">
         <SidebarProvider>
-
+          <SidebarComponent />
           {children}
         </SidebarProvider>
       </body>
