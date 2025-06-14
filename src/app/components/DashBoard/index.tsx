@@ -69,19 +69,19 @@ export default function DashBoardComponent() {
             <div className={styles.containerPlayList}>
                 <PlayListCard 
                     url="https://www.youtube.com/watch?v=NLTi5YXJTtU"
-                    title="Na unção de Deuss"
+                    title="Na unção de Deus"
                     description="Attos 2 worship"
                     tone="TOM: C#"
                 />
                 <PlayListCard 
                     url="https://www.youtube.com/watch?v=NLTi5YXJTtU"
-                    title="Na unção de Deuss"
+                    title="Na unção de Deus"
                     description="Attos 2 worship"
                     tone="TOM: C#"
                 />
                 <PlayListCard 
                     url="https://www.youtube.com/watch?v=NLTi5YXJTtU"
-                    title="Na unção de Deuss"
+                    title="Na unção de Deus"
                     description="Attos 2 worship"
                     tone="TOM: C#"
                 />

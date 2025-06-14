@@ -47,6 +47,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            // background-color: green;
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+                object-fit: cover;
+                // background-color: #6200FC;
+            }
         }
         .containerInfo {
             display: flex;
@@ -55,18 +63,33 @@
             width: 100%;
             height: auto;
             // background-color: #6200FC;
+            // padding: 10px;
+            margin-left: 1rem;
+            p {
+                font-size: 1.2rem;
+                font-weight: 500;
+                color: white;
+                // margin: 0, 0, 1rem 0;
+            }
             .description {
                 display: flex;
                 justify-content: flex-start;
-                span {
+                // margin-left: 1rem;
+                .music {
                     font-size: 1rem;
+                }
+                .hour {
+                    font-size: 1rem;
+                    color: #b3b3b3;
+                    margin-left: 0.5rem; 
                 }
             }
         }
         .containerButton {
-            // width: 100%;
+            // width: 80%;
             display: flex;
             justify-content: end;
+            background-color: green;
 
             > button {
                 border: none;
@@ -86,6 +109,10 @@
 
                 &:active {
                     transform: scale(0.95);
+                }
+                img {
+                    width:  80px;
+                    height: 100%;
                 }
             }
         }

@@ -14,7 +14,7 @@ export default function PlayListCard({ url, title, description, tone }: CardProp
     return (
         <div className={styles.container}>
             <header className={styles.header}>
-                <h2>Playlist da semana</h2>
+                {/* <h2>Playlist da semana</h2> */}
             </header>
             <div className={styles.content}>
 

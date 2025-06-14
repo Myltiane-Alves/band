@@ -6,7 +6,7 @@
     // align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: $bg-tertiary;
+    // background-color: $bg-tertiary;
     width: 100%;
     height: auto;
     .header {
@@ -27,7 +27,7 @@
         justify-content: space-between;
         border-radius: 10px;
         width: 250px;
-        background-color: #f7a017;
+        // background-color: #f7a017;
         height: 100%;
         .containerVideo {
             width: 100%;
@@ -148,14 +148,14 @@
 @media screen and (min-width: 1024px) {
     .container {
         width: 100%;
-        background-color: red;
+        // background-color: red;
         .header {
             h2 {
                 font-size: $font-size-xl;
             }
         }
         .content {
-            width: 300px;
+            width: 350px;
             height: 100%;
             .containerVideo {
                 aspect-ratio: 16/9; // Isso substitui o padding-bottom hack
