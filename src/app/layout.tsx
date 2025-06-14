@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="pt-br">
       <body className="main-content">
         <SidebarProvider>
-          <SidebarComponent />
+          {/* <SidebarComponent /> */}
           {children}
         </SidebarProvider>
       </body>
