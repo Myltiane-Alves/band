@@ -34,18 +34,8 @@ export default function PlayListComponent ({
     };
 
     return (
+    
         <div className={styles.container}>
-            <header className={styles.containerHeader}>
-                    <h2>{title}</h2>
-
-                    <div className={styles.containerSelect}>
-                        <select>
-                            <option value="0"> Festas da igreja</option>
-                            <option value="0"> 1</option>
-                            <option value="0"> 2</option>
-                        </select>
-                    </div>
-            </header>
             <div className={styles.content}>
                     <div className={styles.containerIcon}>
                         <Image src={music} width={70} alt="Music icon"/>
@@ -66,5 +56,6 @@ export default function PlayListComponent ({
                     </div>
             </div>
         </div>
+   
     )
 }

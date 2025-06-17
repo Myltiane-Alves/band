@@ -1,0 +1,22 @@
+ .containerHeader {
+     h2 {
+         font-size: 2rem;
+     }
+
+     .containerSelect {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         margin-top: 1rem;
+
+         >select {
+             width: 175px;
+             height: 100%;
+             min-height: 30px;
+             background-color: #423565;
+             border-radius: 20px;
+             padding: 10px;
+             border: none;
+         }
+     }
+ }
