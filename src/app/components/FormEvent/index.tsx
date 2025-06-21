@@ -3,6 +3,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import styles from "./styles.module.scss";
 import { useSidebar } from "@/contexts/SidebarContext";
 import InputEvent from "./InputEvent";
+import TextAreaEvent from "./textAreaEvent";
 interface FormProps {
     labelName: string;
     labelDate: string;
@@ -42,7 +43,7 @@ export default function FormEvent({
                 <form  >
                   
                     <InputEvent
-                    
+                        label="Nome do Evento"
                         type="text"
                         placeholder="Digite seu Nome"
                         value={name}
@@ -54,7 +55,17 @@ export default function FormEvent({
                     <InputEvent
                     
                         type="date"
-                       
+                        label="Data e Hora"
+                        value={name}
+                        onChange={(value) => setName(value)}
+                        required
+                        // error={emailError}
+                    />
+                
+                    <InputEvent
+                    
+                        type="text"
+                        label="Endereço"
                         value={name}
                         onChange={(value) => setName(value)}
                         required
@@ -78,10 +89,13 @@ export default function FormEvent({
                         </select>
                     </div>
 
-                    <div className={styles.textAreaGroup}>
-
-                        <textarea placeholder="Descrição"  rows={3} />
-                    </div>
+                    <TextAreaEvent 
+                        label="Descrição"
+                        required={false}
+                        value=""
+                        onChange={() => {}}
+                    />
+                    
                     <button type="submit" style={{ marginTop: 8 }}>Enviar</button>
                 </form>
             </div>
