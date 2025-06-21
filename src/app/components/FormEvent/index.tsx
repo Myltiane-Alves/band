@@ -2,9 +2,15 @@ import React, { useEffect, useState } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import styles from "./styles.module.scss";
 import { useSidebar } from "@/contexts/SidebarContext";
-type FormValues = {
-    nome: string;
-    data: string;
+import InputEvent from "./InputEvent";
+interface FormProps {
+    labelName: string;
+    labelDate: string;
+    labelAdress: string;
+    labelEvent: string;
+    labelCipher: string;
+    labelDescription: string;
+    date: string;
     hora: string;
     endereco: string;
     evento: string;
@@ -13,29 +19,17 @@ type FormValues = {
 };
 
 
-export default function FormEvent() {
-    const { register, handleSubmit, reset } = useForm<FormValues>();
+export default function FormEvent({
+    labelName,
+    labelDate,
+    labelAdress,
+    labelEvent,
+    labelCipher,
+    labelDescription
+}: FormProps ) {
+  
 
-    const onSubmit: SubmitHandler<FormValues> = (data) => {
-        console.log(data);
-        reset();
-    };
-        const { isOpen, toggleSidebar } = useSidebar();
-        const [isMobile, setIsMobile] = useState(true);
-    
-        useEffect(() => {
-            const checkIfMobile = () => {
-                const mobileBreakpoint = 767;
-                setIsMobile(window.innerWidth <= mobileBreakpoint);
-            };
-    
-            checkIfMobile();
-            window.addEventListener('resize', checkIfMobile);
-    
-            return () => window.removeEventListener('resize', checkIfMobile);
-        }, []);
-    
-
+    const [name, setName] = useState("");
 
     return (
         <div className={styles.container}>
@@ -45,34 +39,40 @@ export default function FormEvent() {
                     <h2 >Adicionar Novo Evento</h2>
 
                 </div>
-                <form onSubmit={handleSubmit(onSubmit)} >
-                    <div className={styles.inputGroup}>
-                        <label htmlFor="">Nome</label>
-                        <input placeholder="Nome" {...register("nome", { required: true })} />
-                    </div>
-                    <div className={styles.inputGroupDate}> 
-                        <input 
-                            type="date" 
-                            {...register("data", { required: true })}  
-                            className={styles.dateInput}    
-                        />
-                        
-                    </div>
-                    <div className={styles.inputGroup}>
+                <form  >
+                  
+                    <InputEvent
+                    
+                        type="text"
+                        placeholder="Digite seu Nome"
+                        value={name}
+                        onChange={(value) => setName(value)}
+                        required
+                        // error={emailError}
+                    />
 
-                        <input placeholder="Endereço" {...register("endereco", { required: true })} />
-                    </div>
+                    <InputEvent
+                    
+                        type="date"
+                       
+                        value={name}
+                        onChange={(value) => setName(value)}
+                        required
+                        // error={emailError}
+                    />
+                
+                   
 
                     <div className={styles.selectGroup}>
 
-                        <select {...register("evento", { required: true })}>
+                        <select >
                             <option value="">Selecione o evento</option>
 
                         </select>
                     </div>
                     <div className={styles.selectGroup}>
 
-                        <select {...register("cifra", { required: true })}>
+                        <select >
                             <option value="">Selecione a cifra</option>
 
                         </select>
@@ -80,7 +80,7 @@ export default function FormEvent() {
 
                     <div className={styles.textAreaGroup}>
 
-                        <textarea placeholder="Descrição" {...register("descricao")} rows={3} />
+                        <textarea placeholder="Descrição"  rows={3} />
                     </div>
                     <button type="submit" style={{ marginTop: 8 }}>Enviar</button>
                 </form>
