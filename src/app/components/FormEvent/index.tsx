@@ -12,11 +12,6 @@ type FormValues = {
     descricao: string;
 };
 
-type SidebarFormProps = {
-    onClose: () => void;
-    eventos: { value: string; label: string }[];
-    cifras: { value: string; label: string }[];
-};
 
 export default function FormEvent() {
     const { register, handleSubmit, reset } = useForm<FormValues>();
@@ -47,16 +42,20 @@ export default function FormEvent() {
 
             <div className={styles.content}>
                 <div className={styles.containerHeader}>
-                    <h2 >Adicionar Evento</h2>
-                    <button type="button" style={{ fontSize: 18, cursor: "pointer" }}>×</button>
+                    <h2 >Adicionar Novo Evento</h2>
+
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)} >
                     <div className={styles.inputGroup}>
-
+                        <label htmlFor="">Nome</label>
                         <input placeholder="Nome" {...register("nome", { required: true })} />
                     </div>
-                    <div className={styles.inputGroup}> 
-                        <input type="date" {...register("data", { required: true })}  />
+                    <div className={styles.inputGroupDate}> 
+                        <input 
+                            type="date" 
+                            {...register("data", { required: true })}  
+                            className={styles.dateInput}    
+                        />
                         
                     </div>
                     <div className={styles.inputGroup}>
