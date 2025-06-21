@@ -51,21 +51,38 @@ export default function FormEvent() {
                     <button type="button" style={{ fontSize: 18, cursor: "pointer" }}>×</button>
                 </div>
                 <form onSubmit={handleSubmit(onSubmit)} >
-                    <input placeholder="Nome" {...register("nome", { required: true })} />
-                    <div style={{ display: "flex", gap: 8 }}>
-                        <input type="date" {...register("data", { required: true })} style={{ flex: 1 }} />
-                        <input type="time" {...register("hora", { required: true })} style={{ flex: 1 }} />
+                    <div className={styles.inputGroup}>
+
+                        <input placeholder="Nome" {...register("nome", { required: true })} />
                     </div>
-                    <input placeholder="Endereço" {...register("endereco", { required: true })} />
-                    <select {...register("evento", { required: true })}>
-                        <option value="">Selecione o evento</option>
+                    <div className={styles.inputGroup}> 
+                        <input type="date" {...register("data", { required: true })}  />
+                        
+                    </div>
+                    <div className={styles.inputGroup}>
 
-                    </select>
-                    <select {...register("cifra", { required: true })}>
-                        <option value="">Selecione a cifra</option>
+                        <input placeholder="Endereço" {...register("endereco", { required: true })} />
+                    </div>
 
-                    </select>
-                    <textarea placeholder="Descrição" {...register("descricao")} rows={3} />
+                    <div className={styles.selectGroup}>
+
+                        <select {...register("evento", { required: true })}>
+                            <option value="">Selecione o evento</option>
+
+                        </select>
+                    </div>
+                    <div className={styles.selectGroup}>
+
+                        <select {...register("cifra", { required: true })}>
+                            <option value="">Selecione a cifra</option>
+
+                        </select>
+                    </div>
+
+                    <div className={styles.textAreaGroup}>
+
+                        <textarea placeholder="Descrição" {...register("descricao")} rows={3} />
+                    </div>
                     <button type="submit" style={{ marginTop: 8 }}>Enviar</button>
                 </form>
             </div>
